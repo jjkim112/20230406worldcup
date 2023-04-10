@@ -52,7 +52,12 @@ function Worldcup() {
               choice={choice}
               onClickChoice={onClickChoice}
             />
-            <div className="text-2xl mt-4 px-4 py-2 rounded-md">VS</div>
+            <div className="text-2xl mt-4 px-4 py-2 rounded-md">
+              <div>{`${
+                end === 4 ? "준결승" : end === 2 ? "결승" : end + "강"
+              }`}</div>
+              <div>VS</div>
+            </div>
             <AnimalCard
               animal={shuffleAnimal[choice + 1]}
               choice={choice + 1}
